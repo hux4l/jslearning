@@ -290,3 +290,62 @@ console.log(tomas.description());
  */
 
 // for loops
+
+for (let i = 1; i <= 10; i++) {
+    console.log('lifting weights repetition ' + i);
+}
+
+const friends = ['Something', 'Different', 'Cant', 'be', 'Much', 'Better', 25, true, false];
+
+// second array
+const copyOfFriends = [];
+
+// using for loop to print array
+for (let i = 0; i < friends.length; i++) {
+    console.log(`${i}. - ${friends[i]}, ${typeof friends[i]}`);
+
+    // copy values from friends to copuOfFriends
+    copyOfFriends[i] = typeof friends[i];
+
+    // another type to fill the array
+    // copyOfFriends.push(typeof friends[i]);
+}
+
+console.log(copyOfFriends);
+
+// array of birth years and new for ages
+const years = [1991, 2007, 2020, 1998, 1956];
+const ages = [];
+
+// calculate age
+function calcAge(birthYear) {
+    return 2021 - birthYear;
+}
+
+// loops through years array and calculates ages and store thme into ages array
+for (let i = 0; i < years.length; i++) {
+    ages.push(calcAge(years[i]));
+}
+
+console.log(ages);
+
+// two important statemets about for loop
+// continue and break
+
+// if value in the array is string logs only that value!!! skips console.log() if isnt string
+for (let i = 0; i < friends.length; i++) {
+    if (typeof friends[i] !== 'string') {
+        // if true skips to beginning of the loop
+        continue;
+    }
+    console.log(friends[i]);
+}
+
+// if we found number breaks the loop and shows only till breaked
+for (let i = 0; i < ages.length; i++) {
+    if (ages[i] === 1) {
+        // if true skips to beginning of the loop
+        continue;
+    }
+    console.log(ages[i]);
+}

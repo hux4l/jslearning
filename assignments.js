@@ -130,3 +130,13 @@ console.log(island);
 for (let i = 1; i <= 50; i++) {
     console.log(`Voter number ${i} is currently voting`);
 }
+
+// creates array called percentages2 and calculates the values for each country in array populations
+const percentages2 = new Array();
+for (let i = 0; i < populations.length; i++) {
+    percentages2[i] = percentageOfWorld1(populations[i]);
+}
+
+// chceks if array populations and percentages2 have the same amount of values
+const sameValues = populations.length === percentages2.length ? 'same number of values' : 'something is wrong';
+console.log(sameValues);
