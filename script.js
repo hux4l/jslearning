@@ -171,7 +171,7 @@ if (friends.includes('John')) {
 }
  */
 
-/* 
+/*
 // array, but we can store it in object as well
 // in array the order of values matter a lot
 // we need the order to access the data
@@ -200,7 +200,7 @@ if (tomas.job === 'unenploied') {
     tomas.job = 'junior developer';
 }
  */
-
+/*
 // dot vs bracket notation
 const tomas = {
     firstName: 'Tomáš',
@@ -230,6 +230,7 @@ console.log(tomas['last' + nameKey]);
 // for first computing the property we use bracked
 // any other case use dot
 
+
 const interestedIn = prompt('What do you want to know about Tomáš, choose between firstName, lastName, age, job, friends');
 if (tomas[interestedIn]) {
     console.log(tomas[interestedIn]);
@@ -238,7 +239,51 @@ if (tomas[interestedIn]) {
     // need to use brackets, that it can call it from object
 }
 
+
 //adds new propertis to the object
 tomas.location = 'Slovakia';
 tomas['twitter'] = '@hux4l';
 console.log(tomas);
+
+console.log(`${tomas.firstName} has ${tomas.friends.length} friends, his best friend is called ${tomas.friends[0]}`);
+
+ */
+
+// object methods
+const tomas = {
+    firstName: 'Tomáš',
+    lastName: 'Baška',
+    birthYear: 1988,
+    job: 'unenploied',
+    friends: ['Radoslav', 'Johny', 'Marry'],
+    hasDriverLicense: true,
+
+    // this is expression, way to make methods in objects
+    // calcAge: function(birthYear) {
+    //    return 2021 - birthYear;
+    //}
+
+    // using this. as variabile of object
+    //calcAge: function () {
+    //    return 2021 - this.birthYear;
+    //}
+
+    // crates type age
+    calcAge: function () {
+        this.age = 2021 - this.birthYear;
+        return this.age;
+    },
+
+    description: function () {
+        return `${this.firstName} ${this.lastName}, birth in year ${this.birthYear}, is now ${this.age} years old. Works as ${this.job} ${this.hasDriverLicense ? 'can drive' : 'cant drive'} an has ${this.friends.length}`;
+    }
+};
+
+const age = tomas.calcAge();
+// using brackets
+const age1 = tomas.calcAge(tomas['calcAge']());
+console.log(age);
+
+console.log(tomas.age);
+
+console.log(tomas.description());
