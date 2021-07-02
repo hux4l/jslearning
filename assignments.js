@@ -91,3 +91,42 @@ if (neighbours.includes('Germany')) {
 const replace = neighbours.indexOf('Hungaria');
 neighbours[replace] = 'Hungary';
 console.log(neighbours);
+
+// object MyCountry containing infomration about my country
+const myCountry = {
+    country: 'SLovakia',
+    capital: 'Bratislava',
+    language: 'Slovak',
+    population: 5500000,
+    neighbours: ['Poland', 'Ukraine', 'Hungary', 'Austira', 'Czech Republic',],
+
+    // creates a string to describe country
+    description: function () {
+        return `${this.country} has ${this.population} milion ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and capital called ${this.capital}`;
+    },
+
+    // checks if country in object is Island or not
+    checkIsland: function () {
+        this.isIsland = this.neighbours.length > 0 ? false : true;
+        return this.isIsland;
+    }
+};
+
+console.log(myCountry);
+
+// String informatiokn about country
+console.log(`${myCountry.country} has ${myCountry.population} milion ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and capital called ${myCountry.capital}`);
+
+console.log(myCountry.population += 2000000);
+console.log(myCountry['population'] -= 2000000);
+
+console.log(myCountry.description());
+
+// checks if country is Island
+const island = myCountry.checkIsland();
+console.log(island);
+
+// logs the number of Voter currently voting
+for (let i = 1; i <= 50; i++) {
+    console.log(`Voter number ${i} is currently voting`);
+}
