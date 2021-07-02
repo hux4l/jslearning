@@ -248,7 +248,7 @@ console.log(tomas);
 console.log(`${tomas.firstName} has ${tomas.friends.length} friends, his best friend is called ${tomas.friends[0]}`);
 
  */
-
+/*
 // object methods
 const tomas = {
     firstName: 'Tomáš',
@@ -275,7 +275,7 @@ const tomas = {
     },
 
     description: function () {
-        return `${this.firstName} ${this.lastName}, birth in year ${this.birthYear}, is now ${this.age} years old. Works as ${this.job} ${this.hasDriverLicense ? 'can drive' : 'cant drive'} an has ${this.friends.length}`;
+        return `${this.firstName} ${this.lastName}, birth in year ${this.birthYear}, is now ${this.age} years old. Works as ${this.job} ${this.hasDriverLicense ? 'can drive' : 'cant drive'}, an has ${this.friends.length} friends`;
     }
 };
 
@@ -287,3 +287,6 @@ console.log(age);
 console.log(tomas.age);
 
 console.log(tomas.description());
+ */
+
+// for loops
