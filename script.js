@@ -220,3 +220,25 @@ console.log(tomas['age']);
 
 tomas['age'] = 32;
 console.log(tomas.age);
+
+// creates the string and get the property
+const nameKey = 'Name';
+console.log(tomas['first' + nameKey]);
+console.log(tomas['last' + nameKey]);
+
+// when to use dot or bracked
+// for first computing the property we use bracked
+// any other case use dot
+
+const interestedIn = prompt('What do you want to know about Tomáš, choose between firstName, lastName, age, job, friends');
+if (tomas[interestedIn]) {
+    console.log(tomas[interestedIn]);
+} else {
+    console.log('What do you want to know about Tomáš, choose between firstName, lastName, age, job, friends');
+    // need to use brackets, that it can call it from object
+}
+
+//adds new propertis to the object
+tomas.location = 'Slovakia';
+tomas['twitter'] = '@hux4l';
+console.log(tomas);
