@@ -140,3 +140,22 @@ for (let i = 0; i < populations.length; i++) {
 // chceks if array populations and percentages2 have the same amount of values
 const sameValues = populations.length === percentages2.length ? 'same number of values' : 'something is wrong';
 console.log(sameValues);
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+console.log(listOfNeighbours);
+
+// loops through array listOfNeighbours and logs every single neighbour
+// loops throug listOfNeighbours
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    // loops through every single array inside the array lostOfNeighbours
+    for (let j = 0; j < listOfNeighbours[i].length; j++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+    }
+}
+
+// filling array with values of percentages of the world with while loop
+let percentages3 = [];
+while (percentages3.length < 4) {
+    percentages3.push(percentageOfWorld1(populations[percentages3.length]));
+}
+console.log(percentages3);

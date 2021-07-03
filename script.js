@@ -291,6 +291,7 @@ console.log(tomas.description());
 
 // for loops
 
+/*
 for (let i = 1; i <= 10; i++) {
     console.log('lifting weights repetition ' + i);
 }
@@ -349,3 +350,52 @@ for (let i = 0; i < ages.length; i++) {
     }
     console.log(ages[i]);
 }
+ */
+
+/*
+// looping backwards
+const years = [1991, 2007, 2020, 1998, 1956, [1998, 1995, 1985]];
+
+for (let i = years.length - 1; i >= 0; i--) {
+    console.log(years[i]);
+}
+
+const exercise = ['pushups', 'situps', 'plank'];
+
+// loop inside a loop
+for (let i = 1; i <= exercise.length; i++) {
+    console.log(`----- exercise ${i} -----`)
+    for (let j = 1; j < 6; j++) {
+        console.log(exercise[i] + ' ' + j);
+    }
+}
+ */
+
+/* 
+let itRuns = true;
+// run till the condition in () is true
+while (itRuns) {
+    for (let i = 0; i < 10; i++) {
+        console.log(i);
+        if (i === 6) {
+            itRuns = false;
+            break;
+        }
+    }
+};
+ */
+
+// assigns dice a random value from 1 to 6, .trunc() removes ani fraction digits, returns integral value
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+let count = 1;
+
+// use while when you dont know how many times the loop will run, othervise use for
+while (dice !== 6) {
+    count++;
+    console.log(`You rolled a ${dice}`);
+    // every loop assign a new value to dice, othervise it will run forever
+    dice = Math.trunc(Math.random() * 6) + 1;
+};
+
+console.log(`it took ${count} times to roll the dice until you rolled 6`);
