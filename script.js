@@ -39,7 +39,7 @@ function calcAge1(birthYear) {
     return 2021 - birthYear;
 }
 
-const age1 = calcAge1(1988);
+const age1 = calcAge1(1986);
 
 // function without name (anonymous)
 // function expression
@@ -188,43 +188,43 @@ const jonasArray = [
 // object used to group values, in object the order of propertis doesnt matter
 // object for unorganised, unstructured data
 const tomas = {
-    firstName: 'Tomáš',
-    lastName: 'Baška',
-    age: 2021 - 1988,
-    job: 'unenploied',
+    firstName: 'Johny',
+    lastName: 'English',
+    age: 2021 - 1976,
+    job: 'movie star',
     friends: ['Radoslav', 'Johny', 'Marry']
 }
 
-if (tomas.job === 'unenploied') {
+if (tomas.job === 'movie star') {
     console.log('You found a new job!');
-    tomas.job = 'junior developer';
+    tomas.job = 'super hero';
 }
  */
 /*
 // dot vs bracket notation
-const tomas = {
-    firstName: 'Tomáš',
-    lastName: 'Baška',
-    age: 2021 - 1988,
-    job: 'unenploied',
+const john = {
+    firstName: 'John',
+    lastName: 'Travolta',
+    age: 2021 - 1965,
+    job: 'actor',
     friends: ['Radoslav', 'Johny', 'Marry']
 }
 
-console.log(tomas);
+console.log(john);
 
 // . is operator calls the property
-console.log(tomas.lastName);
+console.log(john.lastName);
 
 // can be acessed as array property by caling name of property
-console.log(tomas['age']);
+console.log(john['age']);
 
 tomas['age'] = 32;
-console.log(tomas.age);
+console.log(john.age);
 
 // creates the string and get the property
 const nameKey = 'Name';
-console.log(tomas['first' + nameKey]);
-console.log(tomas['last' + nameKey]);
+console.log(john['first' + nameKey]);
+console.log(john['last' + nameKey]);
 
 // when to use dot or bracked
 // for first computing the property we use bracked
@@ -241,20 +241,20 @@ if (tomas[interestedIn]) {
 
 
 //adds new propertis to the object
-tomas.location = 'Slovakia';
-tomas['twitter'] = '@hux4l';
+john.location = 'USA';
+john['twitter'] = '@john';
 console.log(tomas);
 
-console.log(`${tomas.firstName} has ${tomas.friends.length} friends, his best friend is called ${tomas.friends[0]}`);
+console.log(`${john.firstName} has ${john.friends.length} friends, his best friend is called ${john.friends[0]}`);
 
  */
 /*
 // object methods
 const tomas = {
-    firstName: 'Tomáš',
-    lastName: 'Baška',
-    birthYear: 1988,
-    job: 'unenploied',
+    firstName: 'Thomas',
+    lastName: 'Moor',
+    birthYear: 1845,
+    job: 'writter',
     friends: ['Radoslav', 'Johny', 'Marry'],
     hasDriverLicense: true,
 
